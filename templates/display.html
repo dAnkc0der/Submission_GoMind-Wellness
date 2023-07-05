@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Data</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>College</th>
+            <th>Age</th>
+            <th>Roll No</th>
+            <th>Mobile No</th>
+            <th>Email</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.college }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.roll_no }}</td>
+            <td>{{ student.mobile_no }}</td>
+            <td>{{ student.email }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
